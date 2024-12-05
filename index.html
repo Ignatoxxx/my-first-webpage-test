@@ -7,31 +7,75 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
             background-color: #f0f2f5;
         }
+        nav {
+            background-color: #1a73e8;
+            padding: 1rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
         .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
             background-color: white;
-            padding: 30px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        h1 {
+        h1, h2 {
             color: #1a73e8;
-            margin-bottom: 20px;
         }
-        p {
-            line-height: 1.6;
-            color: #333;
+        .contact-form {
+            display: grid;
+            gap: 10px;
+            max-width: 400px;
+        }
+        input, textarea {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <nav>
+        <a href="#pagrindinis">Pagrindinis</a>
+        <a href="#apie">Apie mus</a>
+        <a href="#kontaktai">Kontaktai</a>
+    </nav>
+    
+    <div class="container" id="pagrindinis">
         <h1>Sveiki atvykę į mano pirmąjį puslapį</h1>
         <p>Čia bus informacija apie mano projektą.</p>
+    </div>
+
+    <div class="container" id="apie">
+        <h2>Apie mus</h2>
+        <p>Mes esame komanda, kurianti įdomius ir naudingus projektus.</p>
+    </div>
+
+    <div class="container" id="kontaktai">
+        <h2>Kontaktai</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Vardas">
+            <input type="email" placeholder="El. paštas">
+            <textarea placeholder="Jūsų žinutė"></textarea>
+            <button type="submit">Siųsti</button>
+        </form>
     </div>
 </body>
 </html>
