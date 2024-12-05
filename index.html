@@ -1,13 +1,8 @@
-{
-  `repo`: `my-first-webpage-test`,
-  `files`: [
-    {
-      `path`: `index.html`,
-      `content`: `<!DOCTYPE html>
-<html lang=\"lt\">
+<!DOCTYPE html>
+<html lang="lt">
 <head>
-    <meta charset=\"UTF-8\">
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mano Puslapis</title>
     <style>
         body {
@@ -54,10 +49,64 @@
             color: #333;
             font-size: 16px;
         }
-        .contact-form`
-    }
-  ],
-  `owner`: `Ignatoxxx`,
-  `branch`: `main`,
-  `message`: `Atnaujintas dizainas`
-}
+        .contact-form {
+            display: grid;
+            gap: 15px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        input, textarea {
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        input:focus, textarea:focus {
+            border-color: #1a73e8;
+            outline: none;
+        }
+        button {
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #1557b0;
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#pagrindinis">Pagrindinis</a>
+        <a href="#apie">Apie mus</a>
+        <a href="#kontaktai">Kontaktai</a>
+    </nav>
+    
+    <div class="container" id="pagrindinis">
+        <h1>Sveiki atvykę į mano pirmąjį puslapį</h1>
+        <p>Sveiki! Šis puslapis yra mano pirmasis projektas, kuriame galite sužinoti daugiau apie mūsų veiklą ir projektus.</p>
+    </div>
+
+    <div class="container" id="apie">
+        <h2>Apie mus</h2>
+        <p>Mes esame jauna ir ambicinga komanda, kurianti inovatyvius ir naudingus projektus. Mūsų tikslas - kurti sprendimus, kurie palengvina žmonių kasdienybę ir padaro pasaulį geresniu.</p>
+    </div>
+
+    <div class="container" id="kontaktai">
+        <h2>Kontaktai</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Jūsų vardas" required>
+            <input type="email" placeholder="El. pašto adresas" required>
+            <textarea placeholder="Jūsų žinutė" rows="5" required></textarea>
+            <button type="submit">Siųsti žinutę</button>
+        </form>
+    </div>
+</body>
+</html>
