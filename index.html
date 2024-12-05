@@ -1,1 +1,86 @@
-PCFET0NUWVBFIGh0bWw+DQo8aHRtbCBsYW5nPSJsdCI+DQo8aGVhZD4NCiAgICA8bWV0YSBjaGFyc2V0PSJVVEYtOCI+DQogICAgPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xLjAiPg0KICAgIDx0aXRsZT5NYW5vIFB1c2xhcGlzPC90aXRsZT4NCiAgICA8c3R5bGU+DQogICAgICAgIGJvZHkgew0KICAgICAgICAgICAgZm9udC1mYW1pbHk6IEFyaWFsLCBzYW5zLXNlcmlmOw0KICAgICAgICAgICAgbWF4LXdpZHRoOiA4MDBweDsNCiAgICAgICAgICAgIG1hcmdpbjogMCBhdXRvOw0KICAgICAgICAgICAgcGFkZGluZzogMjBweDsNCiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmMGYyZjU7DQogICAgICAgIH0NCiAgICAgICAgLmNvbnRhaW5lciB7DQogICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTsNCiAgICAgICAgICAgIHBhZGRpbmc6IDMwcHg7DQogICAgICAgICAgICBib3JkZXItcmFkaXVzOiA4cHg7DQogICAgICAgICAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLDAsMCwwLjEpOw0KICAgICAgICB9DQogICAgICAgIGgxIHsNCiAgICAgICAgICAgIGNvbG9yOiAjMWE3M2U4Ow0KICAgICAgICAgICAgbWFyZ2luLWJvdHRvbTogMjBweDsNCiAgICAgICAgfQ0KICAgICAgICBwIHsNCiAgICAgICAgICAgIGxpbmUtaGVpZ2h0OiAxLjY7DQogICAgICAgICAgICBjb2xvcjogIzMzMzsNCiAgICAgICAgfQ0KICAgIDwvc3R5bGU+DQo8L2hlYWQ+DQo8Ym9keT4NCiAgICA8ZGl2IGNsYXNzPSJjb250YWluZXIiPg0KICAgICAgICA8aDE+U3ZlaWtpIGF0dnlrxJkgxK8gbWFubyBwaXJtxIVqxK8gcHVzbGFwxK88L2gxPg0KICAgICAgICA8cD7EjGlhIGJ1cyBpbmZvcm1hY2lqYSBhcGllIG1hbm8gcHJvamVrdMSFLjwvcD4NCiAgICA8L2Rpdj4NCjwvYm9keT4NCjwvaHRtbD4=
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mano Puslapis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+        nav {
+            background-color: #1a73e8;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #1a73e8;
+        }
+        .contact-form {
+            display: grid;
+            gap: 10px;
+            max-width: 400px;
+        }
+        input, textarea {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1557b0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#pagrindinis">Pagrindinis</a>
+        <a href="#apie">Apie mus</a>
+        <a href="#kontaktai">Kontaktai</a>
+    </nav>
+    
+    <div class="container" id="pagrindinis">
+        <h1>Sveiki atvykę į mano pirmąjį puslapį</h1>
+        <p>Čia bus informacija apie mano projektą.</p>
+    </div>
+
+    <div class="container" id="apie">
+        <h2>Apie mus</h2>
+        <p>Mes esame komanda, kurianti įdomius ir naudingus projektus.</p>
+    </div>
+
+    <div class="container" id="kontaktai">
+        <h2>Kontaktai</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Vardas" required>
+            <input type="email" placeholder="El. paštas" required>
+            <textarea placeholder="Jūsų žinutė" required></textarea>
+            <button type="submit">Siųsti</button>
+        </form>
+    </div>
+</body>
+</html>
