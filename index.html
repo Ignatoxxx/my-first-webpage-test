@@ -9,16 +9,19 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f2f5;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url('https://images.unsplash.com/photo-1479722842840-c7a5e21d0c35?auto=format&fit=crop&w=1920') center/cover fixed;
+            color: #fff;
         }
         nav {
-            background-color: #1a73e8;
+            background-color: #c41e3a;
             padding: 1rem;
             text-align: center;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
         nav a {
             color: white;
@@ -28,25 +31,27 @@
         }
         nav a:hover {
             text-decoration: underline;
+            color: #ffd700;
         }
         .container {
             max-width: 800px;
             margin: 20px auto;
             padding: 30px;
-            background-color: white;
+            background-color: rgba(0, 0, 0, 0.7);
             border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            backdrop-filter: blur(8px);
         }
         #pagrindinis {
             margin-top: 100px;
         }
         h1, h2 {
-            color: #1a73e8;
+            color: #ffd700;
             margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         p {
             line-height: 1.8;
-            color: #333;
             font-size: 16px;
         }
         .contact-form {
@@ -57,16 +62,18 @@
         }
         input, textarea {
             padding: 12px;
-            border: 2px solid #ddd;
+            border: 2px solid #c41e3a;
             border-radius: 6px;
             font-size: 16px;
+            background: rgba(255,255,255,0.9);
         }
         input:focus, textarea:focus {
-            border-color: #1a73e8;
+            border-color: #ffd700;
             outline: none;
+            background: white;
         }
         button {
-            background-color: #1a73e8;
+            background-color: #c41e3a;
             color: white;
             border: none;
             padding: 12px 24px;
@@ -74,15 +81,39 @@
             cursor: pointer;
             font-size: 16px;
             font-weight: bold;
+            transition: all 0.3s ease;
         }
         button:hover {
-            background-color: #1557b0;
+            background-color: #ffd700;
+            color: #c41e3a;
             transform: translateY(-2px);
-            transition: all 0.3s ease;
+        }
+        .snowflake {
+            position: fixed;
+            color: #fff;
+            font-size: 1em;
+            font-family: Arial, sans-serif;
+            text-shadow: 0 0 5px #000;
+        }
+        @keyframes snowflakes-fall {
+            0% {top:-10%}
+            100% {top:100%}
+        }
+        @keyframes snowflakes-shake {
+            0%,100% {transform:translateX(0)}
+            50% {transform:translateX(80px)}
         }
     </style>
 </head>
 <body>
+    <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+    </div>
+
     <nav>
         <a href="#pagrindinis">Pagrindinis</a>
         <a href="#apie">Apie mus</a>
@@ -90,13 +121,13 @@
     </nav>
     
     <div class="container" id="pagrindinis">
-        <h1>Sveiki atvykę į mano pirmąjį puslapį</h1>
-        <p>Sveiki! Šis puslapis yra mano pirmasis projektas, kuriame galite sužinoti daugiau apie mūsų veiklą ir projektus.</p>
+        <h1>Sveiki atvykę į šventinį puslapį</h1>
+        <p>Sveiki! Šis puslapis yra skirtas pasidalinti kalėdine nuotaika ir džiaugsmu.</p>
     </div>
 
     <div class="container" id="apie">
         <h2>Apie mus</h2>
-        <p>Mes esame jauna ir ambicinga komanda, kurianti inovatyvius ir naudingus projektus. Mūsų tikslas - kurti sprendimus, kurie palengvina žmonių kasdienybę ir padaro pasaulį geresniu.</p>
+        <p>Mes esame jauna ir ambicinga komanda, kuri nori dalintis šventine dvasia ir gerumu. Mūsų tikslas - sukurti jaukią ir šventišką atmosferą internete.</p>
     </div>
 
     <div class="container" id="kontaktai">
@@ -108,5 +139,17 @@
             <button type="submit">Siųsti žinutę</button>
         </form>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const snowflakes = document.querySelectorAll('.snowflake');
+            snowflakes.forEach((flake, index) => {
+                flake.style.left = Math.random() * 100 + 'vw';
+                flake.style.animation = `snowflakes-fall 10s linear infinite,
+                                      snowflakes-shake 3s ease-in-out infinite`;
+                flake.style.animationDelay = `${index}s, ${index * 0.5}s`;
+            });
+        });
+    </script>
 </body>
 </html>
