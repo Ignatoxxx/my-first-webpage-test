@@ -1,1 +1,265 @@
-<!-- Naujas paslaugų puslapio kodas -->
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paslaugos - UAB "KASGITA"</title>
+    <style>
+        :root {
+            --primary-color: #003366;
+            --accent-color: #ff6600;
+            --text-color: #333;
+            --light-gray: #f5f5f5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: white;
+        }
+
+        .top-bar {
+            background: var(--primary-color);
+            color: white;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 20px;
+        }
+
+        .main-header {
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            padding: 20px 0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: var(--light-gray);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .section-title p {
+            color: var(--text-color);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #clock {
+            position: fixed;
+            top: 90px;
+            right: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .time {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .date {
+            font-size: 14px;
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <span>📍 Pušyno g. 12, Raudondvaris, 54138</span>
+                <span>📱 Tel.: +370 625 85 621</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <nav>
+            <div class="container">
+                <div class="logo">UAB "KASGITA"</div>
+                <div class="nav-links">
+                    <a href="index.html">Pagrindinis</a>
+                    <a href="index.html#apie">Apie mus</a>
+                    <a href="paslaugos.html">Paslaugos</a>
+                    <a href="index.html#rekvizitai">Rekvizitai</a>
+                    <a href="index.html#kontaktai">Kontaktai</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="clock">
+        <div class="time"></div>
+        <div class="date"></div>
+    </div>
+
+    <section class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mūsų paslaugos</h2>
+                <p>Teikiame platų spektrą gerbūvio ir kasimo darbų paslaugų, užtikrindami aukščiausią kokybę ir profesionalumą</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚛</div>
+                    <h3>Krovinių pervežimas</h3>
+                    <p>Teikiame krovinių gabenimo paslaugas visoje Lietuvoje. Krovinių pervežimas vykdomas moderniais ir patikimais sunkvežimiais.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">⛰️</div>
+                    <h3>Kasimo darbai</h3>
+                    <p>Atliekame įvairius žemės kasimo darbus: pamatų kasimas, tranšėjų kasimas, teritorijos lyginimas ir kiti kasimo darbai.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🏗️</div>
+                    <h3>Gerbūvio darbai</h3>
+                    <p>Teritorijos tvarkymas, aplinkos gražinimas, vejos įrengimas, trinkelių klojimas ir kiti gerbūvio darbai.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🌳</div>
+                    <h3>Aplinkos tvarkymas</h3>
+                    <p>Profesionalus teritorijos paruošimas, želdinių sodinimas, kraštovaizdžio formavimas.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🚜</div>
+                    <h3>Technikos nuoma</h3>
+                    <p>Nuomojame įvairią statybinę ir kasimo techniką su operatoriumi arba be jo.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📦</div>
+                    <h3>Statybinių medžiagų pristatymas</h3>
+                    <p>Užtikriname greitą ir saugų statybinių medžiagų pristatymą į statybos objektus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const timeOptions = { 
+                hour: '2-digit', 
+                minute: '2-digit', 
+                second: '2-digit', 
+                timeZone: 'Europe/Vilnius' 
+            };
+            const dateOptions = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                timeZone: 'Europe/Vilnius'
+            };
+
+            document.querySelector('.time').textContent = now.toLocaleTimeString('lt-LT', timeOptions);
+            document.querySelector('.date').textContent = now.toLocaleDateString('lt-LT', dateOptions);
+        }
+
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+</body>
+</html>
