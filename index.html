@@ -1,2 +1,325 @@
-<!-- Tas pats kodas, tik su pakeistu šiuo elementu -->
-<a href="paslaugos.html" target="_blank">Paslaugos</a>
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAB "KASGITA" - Transporto ir logistikos paslaugos</title>
+    <style>
+        :root {
+            --primary-color: #003366;
+            --accent-color: #ff6600;
+            --text-color: #333;
+            --light-gray: #f5f5f5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: white;
+        }
+
+        .top-bar {
+            background: var(--primary-color);
+            color: white;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 20px;
+        }
+
+        .main-header {
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            padding: 20px 0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1920') center/cover;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .hero-content {
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--primary-color);
+        }
+
+        .company-details {
+            background: var(--light-gray);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background: var(--accent-color);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #e65c00;
+        }
+
+        #clock {
+            position: fixed;
+            top: 90px;
+            right: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .time {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .date {
+            font-size: 14px;
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <span>📍 Pušyno g. 12, Raudondvaris, 54138</span>
+                <span>📱 Tel.: +370 625 85 621</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <nav>
+            <div class="container">
+                <div class="logo">UAB "KASGITA"</div>
+                <div class="nav-links">
+                    <a href="#pagrindinis">Pagrindinis</a>
+                    <a href="#apie">Apie mus</a>
+                    <a href="paslaugos.html" target="_blank">Paslaugos</a>
+                    <a href="#rekvizitai">Rekvizitai</a>
+                    <a href="#kontaktai">Kontaktai</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="clock">
+        <div class="time"></div>
+        <div class="date"></div>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>UAB "KASGITA"</h1>
+                <p>Profesionalios transporto ir logistikos paslaugos</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="apie">
+        <div class="container">
+            <div class="section-title">
+                <h2>Apie mus</h2>
+            </div>
+            <p>Įmonė įkurta 2013 m., Mūsų įmonė specializuojasi gerbūvio ir kasimo darbuose, taip pat teikia krovinių pervežimo paslaugas. Siekiame užtikrinti aukščiausią paslaugų kokybę, profesionalumą ir klientų poreikių įgyvendinimą, prisidedant prie Jūsų projektų sėkmės.</p>
+        </div>
+    </section>
+
+    <section id="rekvizitai" style="background: var(--light-gray)">
+        <div class="container">
+            <div class="section-title">
+                <h2>Rekvizitai</h2>
+            </div>
+            <div class="company-details">
+                <div class="detail-row">
+                    <span class="detail-label">Įmonės pavadinimas:</span>
+                    <span class="detail-value">UAB "KASGITA"</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Įmonės kodas:</span>
+                    <span class="detail-value">305882661</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">PVM kodas:</span>
+                    <span class="detail-value">LT100014307518</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Adresas:</span>
+                    <span class="detail-value">Pušyno g. 12, Raudondvaris, 54138</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Vadovas:</span>
+                    <span class="detail-value">Pranciškus Simutis</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Veiklos sritis:</span>
+                    <span class="detail-value">Krovinių vežimas kelių transportu</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontaktai">
+        <div class="container">
+            <div class="section-title">
+                <h2>Susisiekite</h2>
+            </div>
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Jūsų vardas" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="El. pašto adresas" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Jūsų žinutė" rows="5" required></textarea>
+                </div>
+                <button type="submit">Siųsti žinutę</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const timeOptions = { 
+                hour: '2-digit', 
+                minute: '2-digit', 
+                second: '2-digit', 
+                timeZone: 'Europe/Vilnius' 
+            };
+            const dateOptions = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                timeZone: 'Europe/Vilnius'
+            };
+
+            document.querySelector('.time').textContent = now.toLocaleTimeString('lt-LT', timeOptions);
+            document.querySelector('.date').textContent = now.toLocaleDateString('lt-LT', dateOptions);
+        }
+
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+</body>
+</html>
